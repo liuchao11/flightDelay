@@ -1,0 +1,435 @@
+esri-leaflet-geocoder.cssbody {
+    font-family: 'Microsoft YaHei', 'Open Sans', 'trebuchet ms', arial, sans-serif;
+
+}
+
+#leftSideBar {
+    top: 70px;
+
+}
+
+#sidebar {
+    padding-top: 100px;
+    width: 35px;
+    position: absolute;
+    left: 0;
+    background-color: #e1e1e1;
+    min-height: 100%;
+    z-index: 100;
+    top: 0px;
+}
+
+.item {
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.item div {
+    font-size: 12px;
+}
+
+#closeBar {
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.nav-content {
+    position: absolute;
+    min-height: 100%;
+    width: 35px;
+    background-color: #e1e1e1;
+    opacity: 0;
+    z-index: 99;
+    text-align: center;
+}
+
+.nav-content .nav-con-close {
+    float: right;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+@-webkit-keyframes closeBar_move_right {
+    from {
+    }
+    to {
+        -webkit-transform: translateX(160px) rotate(405deg) scale(1.5);
+        transform: translateX(160px) rotate(405deg) scale(1.5);
+    }
+}
+
+@keyframes closeBar_move_right {
+    from {
+    }
+    to {
+        -webkit-transform: translateX(160px) rotate(405deg) scale(1.5);
+        transform: translateX(160px) rotate(405deg) scale(1.5);
+    }
+}
+
+@-webkit-keyframes closeBar_move_left {
+    from {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    to {
+        -webkit-transform: translateX(-160px) rotate(-45deg) scale(1);
+        transform: translateX(-160px) rotate(-45deg) scale(1);
+    }
+}
+
+@keyframes closeBar_move_left {
+    from {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    to {
+        -webkit-transform: translateX(-160px) rotate(-45deg) scale(1);
+        transform: translateX(-160px) rotate(-45deg) scale(1);
+    }
+}
+
+@-webkit-keyframes move_left {
+    from {
+    }
+    to {
+        -webkit-transform: translateX(-120px);
+        transform: translateX(-120px);
+    }
+}
+
+@keyframes move_left {
+    from {
+    }
+    to {
+        -webkit-transform: translateX(-120px);
+        transform: translateX(-120px);
+    }
+}
+
+@-webkit-keyframes move_right {
+    from {
+    }
+    to {
+        -webkit-transform: translateX(120px);
+        transform: translateX(120px);
+    }
+}
+
+@keyframes move_right {
+    from {
+    }
+    to {
+        -webkit-transform: translateX(120px);
+        transform: translateX(120px);
+    }
+}
+
+.move_right {
+    -webkit-animation-name: move_right;
+    animation-name: move_right;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.move_left {
+    -webkit-animation-name: move_left;
+    animation-name: move_left;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.closeBar_move_right {
+    -webkit-animation-name: closeBar_move_right;
+    animation-name: closeBar_move_right;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.closeBar_move_left {
+    -webkit-animation-name: closeBar_move_left;
+    animation-name: closeBar_move_left;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes nc_move_left {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translateX(-120px);
+        transform: translateX(-120px);
+    }
+}
+
+@keyframes nc_move_left {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translateX(-120px);
+        transform: translateX(-120px);
+    }
+}
+
+@-webkit-keyframes nc_move_right {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(120px);
+        transform: translateX(120px);
+    }
+}
+
+@keyframes nc_move_right {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(120px);
+        transform: translateX(120px);
+    }
+}
+
+.nc_move_right {
+    -webkit-animation-name: nc_move_right;
+    animation-name: move_right;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+}
+
+.nc_move_left {
+    -webkit-animation-name: nc_move_left;
+    animation-name: move_left;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes move_up {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(-250px);
+        transform: translateY(-250px);
+        width: 170px;
+    }
+}
+
+@keyframes move_up {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(-250px);
+        transform: translateY(-250px);
+        width: 170px;
+    }
+}
+
+.move_up {
+    -webkit-animation-name: move_up;
+    animation-name: move_up;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.fadeIn {
+    -webkit-transform: translateX(120px);
+    transform: translateX(120px);
+    opacity: 1;
+}
+
+.fadeInUp {
+    -webkit-transform: translateY(-250px);
+    transform: translateY(-250px);
+    opacity: 1;
+    -webkit-transition: -webkit-transform .2s ease-out, opacity .2s ease-out;
+    transition: transform .2s ease-out, opacity .2s ease-out;
+}
+
+.fadeOutLeft {
+    -webkit-transform: translateX(-120px);
+    transform: translateX(-120px);
+    opacity: 0.0;
+    -webkit-transition: -webkit-transform .2s ease-out, opacity .2s ease-out;
+    transition: transform .2s ease-out, opacity .2s ease-out;
+}
+
+#list {
+    background: url(../images/weather.jpg) no-repeat;
+    margin-top: 4px;
+}
+
+#airline {
+    margin-top: 2px;
+}
+
+#Aircraft-Registered {
+    float: left;
+
+}
+
+#value-Aircraft-Registered {
+    float: right;
+    color: #1C86EE;
+    margin-right: 5px;
+    font-weight: bolder;
+}
+
+#route {
+    overflow: hidden;
+    width: 170px;
+    margin-top: 40px;
+    background: url(../images/route.png) no-repeat;
+    background-position: 50% 65%;
+}
+
+.father {
+    width: 170px;
+    float: left;
+}
+
+#first_Airport {
+    float: right;
+    font-weight: bold;
+}
+
+#alternate_Airport {
+    float: right;
+
+}
+
+.from {
+    overflow: hidden;
+}
+
+#Time_of_Depature {
+    float: left;
+}
+
+#Time_of_Arrive {
+    float: right;
+    color: #8470FF;
+    margin-right: 10px;
+}
+
+#particular-information ul {
+    list-style: none;
+    padding: 0px;
+}
+
+#particular-information ul li {
+    float: left;
+    clear: both;
+    width: 170px;
+    font-weight: bolder;
+}
+
+#particular-information ul li span {
+    font-weight: normal;
+    float: right;
+    margin-right: 20px;
+}
+
+#depature_Airport {
+    text-align: center;
+}
+
+/*下面设置左边航班信息的航线图案*/
+#loadbar {
+    text-align: center;
+    margin: 20px auto;
+    width: 5px;
+    height: 200px;
+    background-color: silver;
+    position: relative;
+}
+
+#bar {
+    margin-top: 0px;
+    width: 32px;
+    position: absolute;
+    left: -14px;
+}
+
+/*时间信息*/
+#arriveTakeofTime ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+#arriveTakeofTime ul li {
+    width: 85px; /*如果显示三列 则width改为70px*/
+    float: left;
+    display: block;
+    height: 30px;
+    color: #1C86EE;
+    font-weight: bolder;
+}
+
+#arriveTakeofTime ul li span {
+    font-size: 14px;
+    color: rgb(119, 31, 31);
+}
+
+#Aircraft-information ul {
+    list-style: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+#Aircraft-information ul li {
+    line-height: 30px;
+}
+
+#Aircraft-information .firstLine {
+    text-align: left;
+}
+
+#Aircraft-information .secondLine li {
+    width: 55px;
+    float: left;
+}
